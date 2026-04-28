@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Gallery.css';
 import { GalleryImage } from '../types';
 
@@ -10,7 +10,6 @@ interface GalleryProps {
 }
 
 const Gallery: React.FC<GalleryProps> = ({ images, isAdmin, onUpdate, onUploadImage }) => {
-  const [editingId, setEditingId] = useState<string | null>(null);
   const [uploading, setUploading] = useState<string | null>(null);
 
   const handleImageUpload = async (id: string, e: React.ChangeEvent<HTMLInputElement>) => {
