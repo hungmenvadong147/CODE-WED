@@ -5,6 +5,7 @@ import { Course } from '../types';
 interface CourseCardProps {
   course: Course;
   isAdmin: boolean;
+  onClick?: () => void;
   onUpdate?: (id: string, course: Partial<Course>) => void;
   onDelete?: (id: string) => void;
   onUploadVideo?: (file: File) => Promise<string>;
@@ -13,6 +14,7 @@ interface CourseCardProps {
 const CourseCard: React.FC<CourseCardProps> = ({
   course,
   isAdmin,
+  onClick,
   onUpdate,
   onDelete,
   onUploadVideo
@@ -58,7 +60,10 @@ const CourseCard: React.FC<CourseCardProps> = ({
   };
 
   return (
-    <div className="course-card">
+    <div 
+      className={`course-card ${!isEditing && onClick ? 'course-card-clickable' : ''}`}
+      onClick={!isEditing && onClick ? onClick : undefined}
+    >
       {isEditing ? (
         <div className="course-edit">
           <div className="form-group">
@@ -111,7 +116,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             <h3>{course.title}</h3>
             <p>{course.description}</p>
             {isAdmin && (
-              <div className="card-actions">
+              <div className="card-actions" onClick={(e) => e.stopPropagation()}>
                 <button className="btn btn-primary" onClick={() => setIsEditing(true)}>
                   Sửa
                 </button>

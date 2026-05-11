@@ -6,6 +6,7 @@ import CourseCard from './CourseCard';
 interface CourseListProps {
   courses: Course[];
   isAdmin: boolean;
+  onCourseClick?: (courseId: string) => void;
   onAdd?: (course: Omit<Course, 'id' | 'createdAt' | 'updatedAt'>) => void;
   onUpdate?: (id: string, course: Partial<Course>) => void;
   onDelete?: (id: string) => void;
@@ -15,6 +16,7 @@ interface CourseListProps {
 const CourseList: React.FC<CourseListProps> = ({
   courses,
   isAdmin,
+  onCourseClick,
   onAdd,
   onUpdate,
   onDelete,
@@ -116,6 +118,7 @@ const CourseList: React.FC<CourseListProps> = ({
               key={course.id}
               course={course}
               isAdmin={isAdmin}
+              onClick={() => onCourseClick?.(course.id)}
               onUpdate={onUpdate}
               onDelete={onDelete}
               onUploadVideo={onUploadVideo}
