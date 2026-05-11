@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +25,7 @@ body {
   flex-direction: column;
 }
 
-/* Scrollbar styling */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -39,78 +43,53 @@ body {
   background: #555;
 }
 
-/* Utility classes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* TipTap Editor Styles */
+.ProseMirror {
+  outline: none;
+  min-height: 200px;
+  padding: 1rem;
 }
 
-.btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.ProseMirror p {
+  margin-bottom: 0.5rem;
 }
 
-.btn-primary {
-  background-color: #4A90E2;
-  color: white;
+.ProseMirror h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.btn-primary:hover {
-  background-color: #357ABD;
+.ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
 }
 
-.btn-danger {
-  background-color: #E74C3C;
-  color: white;
+.ProseMirror h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-.btn-danger:hover {
-  background-color: #C0392B;
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
 }
 
-.btn-success {
-  background-color: #27AE60;
-  color: white;
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.btn-success:hover {
-  background-color: #229954;
-}
-
-.btn-secondary {
-  background-color: #95A5A6;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background-color: #7F8C8D;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: inherit;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-input[type="file"] {
-  padding: 5px;
+.ProseMirror blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
 }
 
 /* Loading spinner */
@@ -135,14 +114,14 @@ input[type="file"] {
   100% { transform: rotate(360deg); }
 }
 
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
-  }
-  
-  .btn {
-    padding: 8px 16px;
-    font-size: 13px;
   }
 }
