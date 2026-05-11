@@ -6,14 +6,13 @@ interface LessonEditorProps {
   lesson: Lesson;
   onSave: (lesson: Partial<Lesson>) => void;
   onCancel: () => void;
-  onUploadImage: (file: File) => Promise<string>;
+  onUploadImage?: (file: File) => Promise<string>;
 }
 
 const LessonEditor: React.FC<LessonEditorProps> = ({
   lesson,
   onSave,
-  onCancel,
-  onUploadImage
+  onCancel
 }) => {
   const [title, setTitle] = useState(lesson.title);
   const [content, setContent] = useState(lesson.content);
