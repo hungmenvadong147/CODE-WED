@@ -1,7 +1,7 @@
 @echo off
 echo ========================================
 echo Push Code to GitHub
-echo Repository: https://github.com/hungmenvadong147/hung.git
+echo Repository: https://github.com/hungmenvadong147/CODE-WED.git
 echo ========================================
 echo.
 
@@ -49,10 +49,10 @@ if errorlevel 1 (
 
 echo.
 echo [5/7] Them remote repository...
-git remote add origin https://github.com/hungmenvadong147/hung.git
+git remote add origin https://github.com/hungmenvadong147/CODE-WED.git
 if errorlevel 1 (
     echo [WARNING] Remote da ton tai, bo qua...
-    git remote set-url origin https://github.com/hungmenvadong147/hung.git
+    git remote set-url origin https://github.com/hungmenvadong147/CODE-WED.git
 )
 
 echo.
@@ -85,7 +85,7 @@ echo ========================================
 echo [SUCCESS] Push code thanh cong!
 echo ========================================
 echo.
-echo Repository: https://github.com/hungmenvadong147/hung
+echo Repository: https://github.com/hungmenvadong147/CODE-WED
 echo Branch: main
 echo.
 echo Cac lan cap nhat sau nay, chay file: update-github.bat

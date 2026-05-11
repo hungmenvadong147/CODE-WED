@@ -1,7 +1,7 @@
 @echo off
 echo ========================================
 echo Update Code to GitHub
-echo Repository: https://github.com/hungmenvadong147/hung.git
+echo Repository: https://github.com/hungmenvadong147/CODE-WED.git
 echo ========================================
 echo.
 
@@ -65,6 +65,6 @@ echo ========================================
 echo [SUCCESS] Cap nhat thanh cong!
 echo ========================================
 echo.
-echo Xem tai: https://github.com/hungmenvadong147/hung
+echo Xem tai: https://github.com/hungmenvadong147/CODE-WED
 echo.
 pause
