@@ -69,6 +69,26 @@ export const initialData: SiteData = {
       id: '4',
       url: 'https://via.placeholder.com/400x300/FFD93D/ffffff?text=Học+trò+4',
       alt: 'Học trò 4'
+    },
+    {
+      id: '5',
+      url: 'https://via.placeholder.com/400x300/9B59B6/ffffff?text=Học+trò+5',
+      alt: 'Học trò 5'
+    },
+    {
+      id: '6',
+      url: 'https://via.placeholder.com/400x300/E67E22/ffffff?text=Học+trò+6',
+      alt: 'Học trò 6'
+    },
+    {
+      id: '7',
+      url: 'https://via.placeholder.com/400x300/1ABC9C/ffffff?text=Học+trò+7',
+      alt: 'Học trò 7'
+    },
+    {
+      id: '8',
+      url: 'https://via.placeholder.com/400x300/E74C3C/ffffff?text=Học+trò+8',
+      alt: 'Học trò 8'
     }
   ]
 };
